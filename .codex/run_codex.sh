@@ -19,6 +19,14 @@ cd "$PROJECT_ROOT"
 echo "📁 Working directory: $PROJECT_ROOT"
 echo "✅ bot_hnushka directory confirmed"
 
+# Проверка что мы в tmux сессии hnushka (опционально, но предпочтительно)
+if [ -n "$TMUX" ]; then
+  TMUX_SESSION=$(tmux display-message -p '#S' 2>/dev/null || echo "unknown")
+  echo "📺 Running in tmux session: $TMUX_SESSION"
+else
+  echo "ℹ️ Not running in tmux (can run standalone)"
+fi
+
 STATE=".codex"
 MEMORY="$STATE/memory.md"
 RULES="$STATE/rules.md"

@@ -28,12 +28,21 @@ if [ -f "$BOT_LOG" ]; then
     echo "$NEW_ERRORS" | tee -a "$ERROR_LOG"
     echo "--- $(date) ---" >> "$ERROR_LOG"
     
-    # Запускаем Codex для исправления
-    echo "🔄 Starting Codex to fix runtime errors..."
-    "$CODEX_SCRIPT" > "$PROJECT_ROOT/.codex/monitor_fix.log" 2>&1 &
+    # Запускаем Codex для исправления в tmux
+    echo "🔄 Starting Codex to fix runtime errors in tmux..."
+    TMUX_SESSION="hnushka"
     
-    echo "✅ Codex improvement started"
-    echo "📋 Check .codex/monitor_fix.log for progress"
+    # Проверка существования tmux сессии
+    if ! tmux has-session -t "$TMUX_SESSION" 2>/dev/null; then
+      # Создаем новую сессию если не существует
+      tmux new-session -d -s "$TMUX_SESSION" -c "$PROJECT_ROOT"
+    fi
+    
+    # Запуск Codex в tmux сессии
+    tmux send-keys -t "$TMUX_SESSION" "cd $PROJECT_ROOT && $CODEX_SCRIPT" Enter
+    
+    echo "✅ Codex improvement started in tmux session '$TMUX_SESSION'"
+    echo "📋 Attach to session: tmux attach -t $TMUX_SESSION"
   else
     echo "✅ No new errors in bot.log"
   fi
