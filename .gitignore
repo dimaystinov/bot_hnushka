@@ -12,11 +12,66 @@ ENV/
 # Environment
 .env
 .env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
+# Secrets, API keys, tokens, credentials
+*.key
+*.pem
+*.p12
+*.pfx
+*_key
+*_keys
+*_token
+*_tokens
+*_secret
+*_secrets
+*_password
+*_passwords
+*_credential
+*_credentials
+*auth*.json
+*credentials*.json
+*secrets*.json
+*config*.json
+*.secret
+*.secrets
+*.token
+*.tokens
+*.credential
+*.credentials
+# Files with sensitive names
+*api_key*
+*api_token*
+*bot_token*
+*openai_key*
+*openrouter_key*
+*appwrite_key*
+
+# Authentication files
+auth.json
+credentials.json
+secrets.json
+.config/auth.json
+.config/credentials.json
+~/.codex/auth.json
+~/.codex/credentials.json
+
+# Session files
+*.session
+*.sessions
+session.json
+sessions/
+
+# API keys and tokens in config files
+config.local.*
+config.production.*
+config.secret.*
+*_local.*
+*_production.*
+*_secret.*
 
 # IDE
 .vscode/
