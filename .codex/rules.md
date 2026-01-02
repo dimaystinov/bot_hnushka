@@ -1,11 +1,20 @@
 # Codex Rules for bot_hnushka
 
+## CRITICAL: Working Directory
+- PROJECT ROOT: /root/bot_hnushka (or wherever bot_hnushka is located)
+- You MUST work ONLY in bot_hnushka directory and its subdirectories
+- NEVER change directory outside of bot_hnushka
+- ALL file operations must be relative to bot_hnushka root
+- Use relative paths: bot/handlers/media.py (NOT absolute paths)
+- Current working directory should always be bot_hnushka root
+
 ## Project Context
 - Python 3.10+ async Telegram bot using aiogram 3
 - Processes voice messages with Whisper transcription
 - Uses LLM chain (OpenRouter → local Ollama) for message classification
 - SQLite database with SQLModel ORM
 - Modular structure: handlers, services, storage, utils
+- Project root: bot_hnushka directory
 
 ## Code Quality Standards
 

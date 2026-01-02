@@ -1,15 +1,36 @@
 #!/usr/bin/env bash
 set -e
 
+# Определяем корневую директорию bot_hnushka
+# Скрипт может быть запущен из любой поддиректории
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+# Проверка что это действительно bot_hnushka
+if [ ! -f "$PROJECT_ROOT/main.py" ] || [ ! -d "$PROJECT_ROOT/bot" ]; then
+  echo "❌ Error: bot_hnushka directory not found"
+  echo "Expected: directory with main.py and bot/ folder"
+  echo "Current: $PROJECT_ROOT"
+  exit 1
+fi
+
+# Переход в корень проекта
+cd "$PROJECT_ROOT"
+echo "📁 Working directory: $PROJECT_ROOT"
+echo "✅ bot_hnushka directory confirmed"
+
 STATE=".codex"
 MEMORY="$STATE/memory.md"
 RULES="$STATE/rules.md"
 TEST_LOG="$STATE/test_log.txt"
 BOT_PID_FILE="$STATE/bot.pid"
+BOT_LOG="$PROJECT_ROOT/bot.log"
+ERROR_LOG="$STATE/errors.log"
 
 mkdir -p "$STATE"
 touch "$MEMORY"
 touch "$TEST_LOG"
+touch "$ERROR_LOG"
 
 # Функция для остановки бота
 stop_bot() {
@@ -51,8 +72,24 @@ PREVIOUS TEST RESULTS:
 $(tail -50 "$TEST_LOG" 2>/dev/null || echo "No previous tests")
 
 TASK:
-1. Analyze the entire codebase
-2. Identify NEW issues only (do not repeat memory):
+1. CRITICAL: Work ONLY in $PROJECT_ROOT directory. Never change directory.
+
+2. Analyze the entire codebase in $PROJECT_ROOT
+
+3. CRITICAL: Check for RUNTIME ERRORS from production (see RUNTIME ERRORS section above):
+   - Runtime errors are HIGHEST PRIORITY - fix them FIRST
+   - If runtime errors exist:
+     * Analyze the error messages carefully
+     * Find the root cause in the code
+     * Fix the bug immediately
+     * Add proper error handling to prevent similar issues
+     * Add logging for better debugging
+     * Test the fix thoroughly
+     * Document what was fixed and why
+   - Runtime errors indicate bugs that occur during actual bot operation
+   - These are more critical than static code analysis issues
+
+4. Identify NEW issues only (do not repeat memory):
    - undefined behavior
    - data races / race conditions
    - logical errors
@@ -63,11 +100,13 @@ TASK:
    - import errors
    - syntax errors
    - configuration issues
+   - unhandled exceptions
+   - resource leaks
 
-3. If NO new issues exist:
-   - Proceed to testing phase (step 4)
+5. If NO new issues AND NO runtime errors:
+   - Proceed to testing phase (step 6)
 
-4. TESTING PHASE - Run and test the bot:
+6. TESTING PHASE - Run and test the bot (in $PROJECT_ROOT):
    a) Check if bot can start:
       - Try: python -c 'from config import settings; print(\"Config OK\")'
       - Try: python -c 'from bot.utils.logger import logger; logger.info(\"Logger OK\")'
@@ -101,7 +140,7 @@ TASK:
       - Verify error handling
       - Check edge cases
 
-5. If issues found in testing:
+7. If issues found in testing:
    - Fix ALL issues immediately
    - Add clear English comments
    - Improve error handling
@@ -109,13 +148,13 @@ TASK:
    - Preserve behavior unless bugfix requires change
    - Re-test after fixes
 
-6. If NO issues found:
+8. If NO issues found:
    - Print exactly: NO_NEW_ISSUES
    - Do NOT modify code
    - Do NOT commit
    - Exit
 
-7. After fixes:
+9. After fixes:
    - Run: git status
    - If there are NO changes: stop
    - Otherwise:
