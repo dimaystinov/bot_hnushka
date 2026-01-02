@@ -73,6 +73,12 @@ config.secret.*
 *_production.*
 *_secret.*
 
+# Database
+*.db
+*.sqlite
+*.sqlite3
+bot.db
+
 # IDE
 .vscode/
 .idea/
