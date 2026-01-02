@@ -1,7 +1,22 @@
 #!/usr/bin/env bash
 set -e
 
+# Определяем корневую директорию
+PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$PROJECT_ROOT"
+
+# Активация venv если существует
+if [ -d "$PROJECT_ROOT/venv" ]; then
+  source "$PROJECT_ROOT/venv/bin/activate"
+  PYTHON_CMD="python3"
+  echo "🐍 Virtual environment activated"
+else
+  PYTHON_CMD="python3"
+  echo "⚠️ venv not found, using system python"
+fi
+
 echo "🧪 Testing and Debugging with Codex"
+echo "📁 Working directory: $PROJECT_ROOT"
 
 TEST_FILE=".codex/test_results.txt"
 BOT_PID_FILE=".codex/bot.pid"
@@ -28,19 +43,19 @@ echo "Running comprehensive bot tests..." | tee "$TEST_FILE"
 
 # Тест 1: Импорты
 echo "=== Test 1: Imports ===" | tee -a "$TEST_FILE"
-python3 -c "from config import settings; print('✅ Config OK')" 2>&1 | tee -a "$TEST_FILE"
-python3 -c "from bot.utils.logger import logger; logger.info('✅ Logger OK')" 2>&1 | tee -a "$TEST_FILE"
-python3 -c "from bot.handlers import common, media; print('✅ Handlers OK')" 2>&1 | tee -a "$TEST_FILE"
-python3 -c "from bot.services import whisper_service, llm_service; print('✅ Services OK')" 2>&1 | tee -a "$TEST_FILE"
+$PYTHON_CMD -c "from config import settings; print('✅ Config OK')" 2>&1 | tee -a "$TEST_FILE"
+$PYTHON_CMD -c "from bot.utils.logger import logger; logger.info('✅ Logger OK')" 2>&1 | tee -a "$TEST_FILE"
+$PYTHON_CMD -c "from bot.handlers import common, media; print('✅ Handlers OK')" 2>&1 | tee -a "$TEST_FILE"
+$PYTHON_CMD -c "from bot.services import whisper_service, llm_service; print('✅ Services OK')" 2>&1 | tee -a "$TEST_FILE"
 
 # Тест 2: Синтаксис
 echo "=== Test 2: Syntax ===" | tee -a "$TEST_FILE"
-python3 -m py_compile main.py 2>&1 | tee -a "$TEST_FILE" && echo "✅ main.py syntax OK" | tee -a "$TEST_FILE"
-find bot -name "*.py" -exec python3 -m py_compile {} \; 2>&1 | tee -a "$TEST_FILE" && echo "✅ All Python files syntax OK" | tee -a "$TEST_FILE"
+$PYTHON_CMD -m py_compile main.py 2>&1 | tee -a "$TEST_FILE" && echo "✅ main.py syntax OK" | tee -a "$TEST_FILE"
+find bot -name "*.py" -exec $PYTHON_CMD -m py_compile {} \; 2>&1 | tee -a "$TEST_FILE" && echo "✅ All Python files syntax OK" | tee -a "$TEST_FILE"
 
 # Тест 3: Конфигурация
 echo "=== Test 3: Configuration ===" | tee -a "$TEST_FILE"
-python3 -c "
+$PYTHON_CMD -c "
 from config import settings
 assert hasattr(settings, 'bot_token'), 'Bot token required'
 assert hasattr(settings, 'whisper_model'), 'Whisper model required'
@@ -49,14 +64,14 @@ print('✅ Configuration OK')
 
 # Тест 4: Модели БД
 echo "=== Test 4: Database Models ===" | tee -a "$TEST_FILE"
-python3 -c "
+$PYTHON_CMD -c "
 from bot.models.database import User, ProcessingTask, Task
 print('✅ Database models OK')
 " 2>&1 | tee -a "$TEST_FILE"
 
 # Тест 5: Инициализация сервисов
 echo "=== Test 5: Service Initialization ===" | tee -a "$TEST_FILE"
-python3 -c "
+$PYTHON_CMD -c "
 from bot.services.whisper_service import WhisperService
 from bot.services.llm_service import LLMClient
 print('✅ Services can be imported')
@@ -65,7 +80,7 @@ print('✅ Services can be imported')
 
 # Тест 6: Запуск бота (краткий тест)
 echo "=== Test 6: Bot Initialization ===" | tee -a "$TEST_FILE"
-timeout 15 python3 -c "
+timeout 15 $PYTHON_CMD -c "
 import asyncio
 import sys
 from config import settings
@@ -97,8 +112,8 @@ if [ -f .env ] && grep -q "BOT_TOKEN=" .env && ! grep -q "your_telegram_bot_toke
   echo "=== Test 7: Bot Runtime Test ===" | tee -a "$TEST_FILE"
   echo "Starting bot in background for 30 seconds..." | tee -a "$TEST_FILE"
   
-  # Запуск бота в фоне
-  nohup python3 main.py > .codex/bot_output.log 2>&1 &
+  # Запуск бота в фоне (с venv если доступен)
+  nohup $PYTHON_CMD main.py > .codex/bot_output.log 2>&1 &
   BOT_PID=$!
   echo "$BOT_PID" > "$BOT_PID_FILE"
   

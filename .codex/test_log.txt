@@ -302,3 +302,649 @@ Traceback (most recent call last):
     from pydantic_settings import BaseSettings, SettingsConfigDict
 ModuleNotFoundError: No module named 'pydantic_settings'
 ---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---
+Test 1: Checking imports...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/handlers/common.py", line 6, in <module>
+    from bot.utils.logger import logger
+  File "/root/bot_hnushka/bot/utils/logger.py", line 3, in <module>
+    from loguru import logger
+ModuleNotFoundError: No module named 'loguru'
+Test 2: Checking syntax...
+Test 3: Validating config...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+Test 4: Checking database models...
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/root/bot_hnushka/bot/models/database.py", line 6, in <module>
+    from sqlmodel import Field, SQLModel, Relationship
+ModuleNotFoundError: No module named 'sqlmodel'
+Test 5: Testing bot initialization...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+  File "/root/bot_hnushka/config.py", line 6, in <module>
+    from pydantic_settings import BaseSettings, SettingsConfigDict
+ModuleNotFoundError: No module named 'pydantic_settings'
+---

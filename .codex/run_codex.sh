@@ -19,6 +19,20 @@ cd "$PROJECT_ROOT"
 echo "📁 Working directory: $PROJECT_ROOT"
 echo "✅ bot_hnushka directory confirmed"
 
+# Активация venv если существует
+if [ -d "$PROJECT_ROOT/venv" ]; then
+  source "$PROJECT_ROOT/venv/bin/activate"
+  echo "🐍 Virtual environment activated"
+  PYTHON_CMD="python3"
+else
+  echo "⚠️ venv not found, using system python"
+  PYTHON_CMD="python3"
+fi
+
+# Проверка Python
+PYTHON_VERSION=$($PYTHON_CMD --version 2>&1)
+echo "Python: $PYTHON_VERSION"
+
 # Проверка что мы в tmux сессии hnushka (опционально, но предпочтительно)
 if [ -n "$TMUX" ]; then
   TMUX_SESSION=$(tmux display-message -p '#S' 2>/dev/null || echo "unknown")
