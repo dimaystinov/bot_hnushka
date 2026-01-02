@@ -115,3 +115,23 @@
 - Basic functionality should work
 - Handle edge cases
 
+## Bot Testing Checklist
+When testing the bot, verify:
+1. **Imports**: All modules can be imported without errors
+2. **Configuration**: Settings can be loaded and validated
+3. **Database**: Models can be imported, database can be initialized
+4. **Services**: WhisperService, LLMClient can be instantiated
+5. **Handlers**: All handlers can be imported and registered
+6. **Startup**: Bot can start without immediate errors
+7. **Error Handling**: All exceptions are caught and logged
+8. **Resource Cleanup**: Files, connections are properly closed
+9. **Async Safety**: No blocking operations in async functions
+10. **Type Safety**: Type hints are correct and consistent
+
+## Runtime Testing
+- Test bot startup sequence
+- Verify all services initialize correctly
+- Check for memory leaks
+- Verify error recovery
+- Test graceful shutdown
+
