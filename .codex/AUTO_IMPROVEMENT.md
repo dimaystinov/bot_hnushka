@@ -70,6 +70,19 @@ git pull
 
 ## Ручной запуск
 
+### В tmux сессии (рекомендуется)
+```bash
+cd /root/bot_hnushka
+
+# Создать/подключиться к сессии
+tmux new-session -d -s hnushka -c /root/bot_hnushka
+tmux attach -t hnushka
+
+# Запустить Codex
+./.codex/run_codex.sh
+```
+
+### Без tmux (standalone)
 ```bash
 cd /root/bot_hnushka
 ./.codex/run_codex.sh
