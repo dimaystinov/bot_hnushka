@@ -203,27 +203,32 @@ COMMIT RULES:
   echo "🧪 Running bot tests..."
   stop_bot
   
+  # Активация venv для тестов (если еще не активирован)
+  if [ -d "$PROJECT_ROOT/venv" ] && [ -z "$VIRTUAL_ENV" ]; then
+    source "$PROJECT_ROOT/venv/bin/activate"
+  fi
+  
   # Тест 1: Проверка импортов
   echo "Test 1: Checking imports..." | tee -a "$TEST_LOG"
-  python3 -c "from config import settings; print('✅ Config OK')" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Config error" | tee -a "$TEST_LOG"
-  python3 -c "from bot.utils.logger import logger; logger.info('✅ Logger OK')" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Logger error" | tee -a "$TEST_LOG"
-  python3 -c "from bot.handlers import common, media; print('✅ Handlers OK')" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Handlers error" | tee -a "$TEST_LOG"
+  $PYTHON_CMD -c "from config import settings; print('✅ Config OK')" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Config error" | tee -a "$TEST_LOG"
+  $PYTHON_CMD -c "from bot.utils.logger import logger; logger.info('✅ Logger OK')" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Logger error" | tee -a "$TEST_LOG"
+  $PYTHON_CMD -c "from bot.handlers import common, media; print('✅ Handlers OK')" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Handlers error" | tee -a "$TEST_LOG"
   
   # Тест 2: Проверка синтаксиса
   echo "Test 2: Checking syntax..." | tee -a "$TEST_LOG"
-  python3 -m py_compile main.py 2>&1 | tee -a "$TEST_LOG" || echo "❌ Syntax error in main.py" | tee -a "$TEST_LOG"
+  $PYTHON_CMD -m py_compile main.py 2>&1 | tee -a "$TEST_LOG" || echo "❌ Syntax error in main.py" | tee -a "$TEST_LOG"
   
   # Тест 3: Проверка конфигурации
   echo "Test 3: Validating config..." | tee -a "$TEST_LOG"
-  python3 -c "from config import settings; assert hasattr(settings, 'bot_token'), 'Bot token required'" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Config validation error" | tee -a "$TEST_LOG"
+  $PYTHON_CMD -c "from config import settings; assert hasattr(settings, 'bot_token'), 'Bot token required'" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Config validation error" | tee -a "$TEST_LOG"
   
   # Тест 4: Проверка инициализации БД (без реального подключения)
   echo "Test 4: Checking database models..." | tee -a "$TEST_LOG"
-  python3 -c "from bot.models.database import User, ProcessingTask; print('✅ Models OK')" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Models error" | tee -a "$TEST_LOG"
+  $PYTHON_CMD -c "from bot.models.database import User, ProcessingTask; print('✅ Models OK')" 2>&1 | tee -a "$TEST_LOG" || echo "❌ Models error" | tee -a "$TEST_LOG"
   
   # Тест 5: Попытка запуска бота (краткий тест)
   echo "Test 5: Testing bot initialization..." | tee -a "$TEST_LOG"
-  timeout 10 python3 -c "
+  timeout 10 $PYTHON_CMD -c "
 import asyncio
 import sys
 from config import settings
