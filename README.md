@@ -52,24 +52,24 @@ cp .env.example .env
 
 ```env
 # Обязательные
-BOT_TOKEN=[REMOVED_BOT_TOKEN]
+BOT_TOKEN=your_telegram_bot_token_here
 
 # Whisper (локальный или через API)
-WHISPER_MODEL=base
+WHISPER_MODEL=medium
 WHISPER_DEVICE=cpu
 USE_OPENAI_WHISPER_API=false
 
 # FreeQwenApi (приоритетный)
-FREEWEN_API_URL=http://localhost:8000
-FREEWEN_MODEL=qwen2.5-7b-instruct
+FREEWEN_API_URL=http://localhost:3264
+FREEWEN_MODEL=qwen-max-latest
 
 # OpenRouter (fallback)
-OPENROUTER_API_KEY=[REMOVED_API_KEY]
-OPENROUTER_MODEL=openai/gpt-4o-mini
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+OPENROUTER_MODEL=google/gemini-2.0-flash-exp:free
 
 # Локальная LLM (последний fallback)
 LOCAL_LLM_URL=http://localhost:11434
-LOCAL_LLM_MODEL=llama3.2
+LOCAL_LLM_MODEL=qwen:4b
 LOCAL_LLM_API_TYPE=ollama
 ```
 
