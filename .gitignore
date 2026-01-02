@@ -98,3 +98,7 @@ Thumbs.db
 temp/
 tmp/
 
+# Codex state (memory can be committed, but not sensitive data)
+.codex/test_results.txt
+.codex/*.log
+
